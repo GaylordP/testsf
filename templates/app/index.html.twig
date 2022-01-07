@@ -1,0 +1,33 @@
+{% extends 'app/_template.html.twig' %}
+
+{% block title %}
+    Liste des articles
+{% endblock %}
+
+{% block content %}
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">
+          Titre
+        </th>
+        <th scope="col">
+          Date de création
+        </th>
+        <th scope="col">
+          Auteur
+        </th>
+        <th scope="col">
+          Options
+        </th>
+      </tr>
+    </thead>
+    <tbody id="table-content">
+    </tbody>
+  </table>
+{% endblock %}
+
+{% block javascripts %}
+  {{ parent() }}
+  {{ encore_entry_script_tags('index-screen') }}
+{% endblock %}
