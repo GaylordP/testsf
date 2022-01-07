@@ -17,11 +17,11 @@ const getArticles = async (loader, successCallback) => {
 
 const deleteArticle = async (articleSlug, successCallback) => {
     try {
-        response = await axios.delete('http://localhost:8082/api/articles/' + articleSlug)
+        await axios.delete('http://localhost:8082/api/articles/' + articleSlug)
 
         successCallback()
-    } catch {
-
+    } catch (e) {
+        console.log(e)
     }
 }
 
